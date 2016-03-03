@@ -1,0 +1,2 @@
+# PAMSI
+kurs pwr PAMSI
