@@ -4,7 +4,7 @@ program: main.o tab_mng.o timer.o
 main.o: main.cpp
 	g++ -std=c++11 -c main.cpp 
 
-tab_mng.o: tab_mng.cpp tab_mng.h
+tab_mng.o: tab_mng.cpp tab_mng.h Interfejs.h
 	g++ -std=c++11 -c tab_mng.cpp 
 
 timer.o: timer.cpp timer.h
