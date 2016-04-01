@@ -8,8 +8,8 @@
 
 class Interfejs_lista{
     public:
-        virtual int add() =0;
-        virtual void remove() =0;
+        virtual int add(element &n_element, int n_value) =0;
+        virtual void remove(int position) =0;
         virtual element get() =0;
         virtual int size() =0;
 }
