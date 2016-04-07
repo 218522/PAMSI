@@ -2,6 +2,7 @@
 #include "element.h"
 #include "list_head.h"
 #include "interface.h"
+#include "timer.h"
 using namespace std;
 /*Wersja do testowania.
     Zmiany:
