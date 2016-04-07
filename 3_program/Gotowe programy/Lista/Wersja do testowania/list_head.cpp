@@ -15,7 +15,6 @@ void list_head::find_in_list(int value){
     element* pointer = first;
     while((pointer->next !=0)&&(pointer->value != value)){
         pointer = pointer->next;
-        cout<<"1 ";
     }
 }
 
