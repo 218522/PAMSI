@@ -12,8 +12,8 @@ int main()
     Stos.add();
     Stos.add();
     Stos.add();
-    cout<<Stos.size()<<endl;
+    cout<<"Stos size: "<<Stos.size()<<endl;
     Stos.remove();
-    cout<<Stos.size()<<endl;
+    cout<<"Stos size: "<<Stos.size()<<endl;
     return 0;
 }
