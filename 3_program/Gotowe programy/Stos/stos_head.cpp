@@ -8,8 +8,8 @@ stos_head::stos_head()
     this->last=0;
     cout<<"Stos created"<<endl;
 }
-
-stos_head::add(){
+//Dodaje element na wierzch stosu
+int stos_head::add(){
     element* n_element = new element;
     if(last==0){
         last=n_element;
@@ -36,7 +36,7 @@ int stos_head::size(){
     }
     return stos_size;
 }
-
+//Usuwa element z wierzchu stosu
 void stos_head::remove(){
     if(last==0){
         cout<<"Stos is empty!"<<endl;
@@ -49,8 +49,8 @@ void stos_head::remove(){
             pointer = pointer->next;
             set++;
         }
-        cout<<pointer->value<<endl;
         delete pointer->next;
         pointer->next=0;
+	cout<<"Element removed"<<endl;
     }
 }
