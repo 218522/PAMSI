@@ -10,28 +10,23 @@ using namespace std;
 /*
 
 */
-
+/*
+  Moje modyfikacje:
+  - void List::show_list() wypisuje liste na cout
+  - Element* List::get_address(int position) zwraca wskaznik na element z position
+*/
 
 int main()
 {
 
   Test_lista Test;
-  Test.przygotuj(10);
-  Test.get(10);
-  cout<<Test.get_size();
+  Test.przygotuj(14);
+  Test.show_list();
+  Test.Quicksort();
+  Test.show_list();
+  //Test.get(4);
+  //Test.get_address(0);
+  //cout<<Test.get_size();
   cout<<"Done"<<endl;
-
-
-
-//Kolejka kol;
-    //int tab[]={10,100,1000,10000,100000,1000000,1000000000};
-
-    /*
-    for(int i=0;i<7;i++)
-    {
-    Test.przygotuj(tab[i]);
-    Test.wykonaj(tab[i]);
-    }
-    */
     return 0;
 }

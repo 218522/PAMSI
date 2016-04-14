@@ -14,13 +14,14 @@ public:
         poczatek=NULL;
         koniec=NULL;
     }
-    void QS();
+    virtual Element* get_address(int position);
+    virtual void show_list();
+    virtual void Quicksort();
     virtual void dodaj(int x,int nr);
     virtual void usun(int pozycja);
     virtual int get(int nr);
     virtual int get_size();
     virtual void przeszukaj(int a);
-
 };
 
 #endif

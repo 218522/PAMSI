@@ -26,8 +26,10 @@ public:
     virtual void usun(int pozycja)=0;
     virtual int get(int nr)=0;
     virtual int get_size()=0;
+    virtual Element* get_address(int position)=0;
+    virtual void show_list()=0;
+    virtual void Quicksort()=0;
     virtual void przeszukaj(int a)=0;
-
 };
 
 #endif // LISTA_HH
