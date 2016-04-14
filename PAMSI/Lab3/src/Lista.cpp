@@ -188,7 +188,6 @@ void Lista::Quicksort(int left_counter, int right_counter){
   Element* pivot;
   int pivot_value;
   int list_size = left_counter+right_counter-1;
-  cout<<"list size "<<list_size<<endl;
   //Pivot to srodkowy element listy
   if(list_size%2==0){
     pivot = get_address(list_size/2);
@@ -197,10 +196,32 @@ void Lista::Quicksort(int left_counter, int right_counter){
     pivot = get_address((list_size+1)/2);
   }
   pivot_value=pivot->dana;
-  cout<<"Pivot: "<<pivot_value<<endl;
   // koniec wybierania pivota
-  // Element* before_left = new Element(-1);
-  // before_left->nastepny = poczatek;
+  //Pivot = zaokraglona wartosc srednia
+  /*
+  float average=0;
+  Element *tmp=get_address(left_counter);
+  while(how_far(tmp)<=right_counter)
+    {
+      average+=tmp->dana;
+      tmp=tmp->nastepny;
+    }
+    average = average/list_size;
+    average=round(average);
+    while(1){
+      tmp=get_address(left_counter);
+      while((tmp->dana!=average)&&(how_far(tmp)<=right_counter)){
+	tmp=tmp->nastepny;
+	}
+	if(tmp->dana!=average){
+	average--;
+	}
+	else{break;}
+    }
+    pivot_value = average;
+    cout<<"Pivot: "<<average<<endl;
+  */
+
   Element* left = get_address(left_counter);
   Element* right = get_address(right_counter);
   int c=0;
@@ -209,12 +230,9 @@ void Lista::Quicksort(int left_counter, int right_counter){
   while(1){
 
     while(pivot_value>(left=get_address(how_far(left)+d))->dana){d=1;}
-    cout<<"left -> "<<left->dana<<endl;
     while(pivot_value<(right=get_address(how_far(right)-c))->dana){c=1;}
-    cout<<"right -> "<<right->dana<<endl;
     c=1;
     d=1;
-    //cout<<left->dana<<" "<<left_counter<<" <-> "<<right_counter<<" "<<right->dana<<endl;
     if(how_far(left)+(list_size-how_far(right))<=list_size){
       //Swapping elements
       int help;
@@ -223,34 +241,15 @@ void Lista::Quicksort(int left_counter, int right_counter){
       right->dana = help;
     }
     else{
-cout<<"INFO:"<<endl<<"- left place "<<how_far(left)<<endl<<"- right place "<<how_far(right)<<endl;
-    cout<<"- left pointer "<<left->dana<<endl<<"- right pointer "<<right->dana<<endl;
       break;
     }
-    cout<<"INFO:"<<endl<<"- left place "<<how_far(left)<<endl<<"- right place "<<how_far(right)<<endl;
-    cout<<"- left pointer "<<left->dana<<endl<<"- right pointer "<<right->dana<<endl;
   }
-  
   if(how_far(right)>left_counter){
     Quicksort(left_counter,how_far(right));
   }
   if(how_far(left)<right_counter){
     Quicksort(how_far(left), right_counter);
   }
-  //Pivot = zaokraglona wartosc srednia
-  /*
-  float average=0;
-  int pivot;
-  Element *tmp=poczatek;
-    while(tmp)
-    {
-      average+=tmp->dana;
-      tmp=tmp->nastepny;
-    }
-    average = average/get_size();
-    average=round(average);
-    cout<<"Pivot: "<<average<<endl;
-    pivot = average;*/
 }
 //********************modifications bottom***************
 

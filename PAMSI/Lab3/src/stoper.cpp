@@ -15,6 +15,7 @@ void stoper::Wylacz()
 void stoper::Czas_trwania()
 {
     trwanie=(double)(stop-start)/CLOCKS_PER_SEC;
+    cout<<"Execution time: "<<trwanie<<endl;
 }
 
 void stoper::Zliczaj_do_sumy()
