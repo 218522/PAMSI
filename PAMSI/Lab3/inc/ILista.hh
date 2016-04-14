@@ -27,8 +27,9 @@ public:
     virtual int get(int nr)=0;
     virtual int get_size()=0;
     virtual Element* get_address(int position)=0;
+    virtual int how_far(Element* pointer)=0;
     virtual void show_list()=0;
-    virtual void Quicksort()=0;
+    virtual void Quicksort(int left_counter, int right_counter)=0;
     virtual void przeszukaj(int a)=0;
 };
 

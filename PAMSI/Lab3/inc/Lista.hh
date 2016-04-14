@@ -15,8 +15,9 @@ public:
         koniec=NULL;
     }
     virtual Element* get_address(int position);
+    virtual int how_far(Element* pointer);
     virtual void show_list();
-    virtual void Quicksort();
+    virtual void Quicksort(int left_counter, int right_counter);
     virtual void dodaj(int x,int nr);
     virtual void usun(int pozycja);
     virtual int get(int nr);

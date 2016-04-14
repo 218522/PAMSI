@@ -169,12 +169,26 @@ void Lista::show_list(){
 	cout<<tmp->dana<<" ";
         tmp=tmp->nastepny;
     }
+    cout<<endl;
+}
+
+int Lista::how_far(Element* pointer){
+  Element *tmp = poczatek;
+  int i=1;
+    while(tmp!=pointer)
+    {
+        tmp=tmp->nastepny;
+	i++;    
+    }
+    return i;
 }
 
 //Quicksort algoritm
-void Lista::Quicksort(){
-  int list_size=get_size();
+void Lista::Quicksort(int left_counter, int right_counter){
   Element* pivot;
+  int pivot_value;
+  int list_size = left_counter+right_counter-1;
+  cout<<"list size "<<list_size<<endl;
   //Pivot to srodkowy element listy
   if(list_size%2==0){
     pivot = get_address(list_size/2);
@@ -182,56 +196,47 @@ void Lista::Quicksort(){
   else{
     pivot = get_address((list_size+1)/2);
   }
-  cout<<"Pivot: "<<pivot->dana<<endl;
-  Element* left = poczatek;
-  int left_counter = 1;
-  Element* right = koniec;
-  int right_counter = 1;
+  pivot_value=pivot->dana;
+  cout<<"Pivot: "<<pivot_value<<endl;
+  // koniec wybierania pivota
+  // Element* before_left = new Element(-1);
+  // before_left->nastepny = poczatek;
+  Element* left = get_address(left_counter);
+  Element* right = get_address(right_counter);
+  int c=0;
+  int d=0;
+
   while(1){
-    while(pivot->dana>left->dana){
-      left=left->nastepny;
-      left_counter++;
-      }
-    while(pivot->dana<right->dana){
-      //idziemy od prawej do lewej, a nie mamy wskaznika w te strone
-      right=get_address(get_size()-right_counter);
-      right_counter++;
-      }
-    cout<<left->dana<<" "<<left_counter<<" <-> "<<right_counter<<" "<<right->dana<<endl;
-    if(right_counter+left_counter<=get_size()){
+
+    while(pivot_value>(left=get_address(how_far(left)+d))->dana){d=1;}
+    cout<<"left -> "<<left->dana<<endl;
+    while(pivot_value<(right=get_address(how_far(right)-c))->dana){c=1;}
+    cout<<"right -> "<<right->dana<<endl;
+    c=1;
+    d=1;
+    //cout<<left->dana<<" "<<left_counter<<" <-> "<<right_counter<<" "<<right->dana<<endl;
+    if(how_far(left)+(list_size-how_far(right))<=list_size){
       //Swapping elements
-      Element* pointer_1=get_address(left_counter);
-      Element* pointer_2=get_address(get_size()+1-right_counter);/*
-      int value_1 = pointer_1->dana;
-      int value_2 = pointer_2->dana;
-      cout<<pointer_1->dana<<endl;
-      cout<<pointer_2->dana<<endl;
-      usun(0);
-      usun(get_size());
-      dodaj(value_2,0);
-      dodaj(value_1,get_size());
-      //usun(get_size()+1-right_counter);
-      */
-      Element* pointer_1_after = pointer_1->nastepny;
-      Element* pointer_2_after = pointer_2->nastepny;
-      Element* help;
-      cout<<pointer_1->dana<<endl;
-      cout<<pointer_1_after->dana<<endl;
-      cout<<pointer_2->dana<<endl;
-      cout<<pointer_2_after->dana<<endl;
-      help = pointer_1;
-      pointer_1=pointer_2;
-      pointer_2=help;
-      help = pointer_1_after;
-      pointer_1_after=pointer_2_after;
-      pointer_2_after = help;
-      cout<<pointer_1->dana<<endl;
-      cout<<pointer_1_after->dana<<endl;
-      cout<<pointer_2->dana<<endl;
-      cout<<pointer_2_after->dana<<endl;
+      int help;
+      help = left->dana;
+      left->dana = right->dana;
+      right->dana = help;
     }
+    else{
+cout<<"INFO:"<<endl<<"- left place "<<how_far(left)<<endl<<"- right place "<<how_far(right)<<endl;
+    cout<<"- left pointer "<<left->dana<<endl<<"- right pointer "<<right->dana<<endl;
       break;
-}
+    }
+    cout<<"INFO:"<<endl<<"- left place "<<how_far(left)<<endl<<"- right place "<<how_far(right)<<endl;
+    cout<<"- left pointer "<<left->dana<<endl<<"- right pointer "<<right->dana<<endl;
+  }
+  
+  if(how_far(right)>left_counter){
+    Quicksort(left_counter,how_far(right));
+  }
+  if(how_far(left)<right_counter){
+    Quicksort(how_far(left), right_counter);
+  }
   //Pivot = zaokraglona wartosc srednia
   /*
   float average=0;

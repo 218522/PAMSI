@@ -6,10 +6,6 @@
 
 using namespace std;
 
-//QUICK-SORT
-/*
-
-*/
 /*
   Moje modyfikacje:
   - void List::show_list() wypisuje liste na cout
@@ -20,13 +16,12 @@ int main()
 {
 
   Test_lista Test;
-  Test.przygotuj(14);
+  Test.przygotuj(20);
   Test.show_list();
-  Test.Quicksort();
+  Test.Quicksort(1,20);
+  //Test.Quicksort(1,1);
+  //Test.Quicksort(1,1);
   Test.show_list();
-  //Test.get(4);
-  //Test.get_address(0);
-  //cout<<Test.get_size();
   cout<<"Done"<<endl;
     return 0;
 }
