@@ -1,0 +1,76 @@
+# depslib dependency file v1.0
+1461269444 source:c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\main.cpp
+	<iostream>
+	<string>
+	"AssocTab.h"
+	<fstream>
+	<file_service.h>
+	"Stoper.h"
+
+1461094810 c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\include\key_uncd.h
+	<string>
+	<iostream>
+
+1461094283 source:c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\src\element.cpp
+	"element.h"
+	<iostream>
+
+1461170527 c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\include\element.h
+	"string"
+
+1461176732 c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\include\list_head.h
+	"IList.h"
+	"element.h"
+	<string>
+
+1461099257 c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\include\ilist.h
+	"element.h"
+	<string>
+
+1461231384 source:c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\src\list_head.cpp
+	"element.h"
+	"IList.h"
+	"list_head.h"
+	<iostream>
+	<string>
+
+1461268476 source:c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\src\assoctab.cpp
+	"AssocTab.h"
+	<string>
+	<iostream>
+
+1461268381 c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\include\assoctab.h
+	"IAssocTab.h"
+	"HashTab.h"
+	"list_head.h"
+
+1461176580 c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\include\iassoctab.h
+	<string>
+	"element.h"
+
+1461103660 c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\include\ihashtab.h
+	<string>
+	<iostream>
+
+1461103352 c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\include\hashtab.h
+	"IHashTab.h"
+
+1461103173 source:c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\src\hashtab.cpp
+	"HashTab.h"
+	<iostream>
+	<string>
+
+1461235096 source:c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\src\stoper.cpp
+	"Stoper.h"
+	"file_service.h"
+	<fstream>
+
+1461233034 c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\include\file_service.h
+	<iostream>
+	<string>
+
+1461233723 c:\users\michal\desktop\cb - beka\lista_asocjacyjna\lista_asocjacyjna\include\stoper.h
+	<iostream>
+	<time.h>
+	<fstream>
+
