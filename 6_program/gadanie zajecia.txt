@@ -1,0 +1,19 @@
+22.04.16
+
+ogarn¹æ latec
+
+DRZEWA
+z³o¿onoœæ obliczeniowa
+- optymistyczna log(n)
+- pesymistyczna O(n)
+
+implementacja drzewa na bazie tablicy
+implementacja na bazie wskaŸników
+
+atrybuty:
+add (el);
+find (el);
+
+W domu
+Zmierzyæ czas i zbadaæ z³o¿onoœæ
+obliczeniow¹ operacji dodawania i zapisu.
