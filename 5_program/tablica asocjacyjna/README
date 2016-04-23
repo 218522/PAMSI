@@ -1,0 +1,3 @@
+- program wpisuje wyniki do mpliku wyniki.txt. Pierwszy wynik to czas dodawania danych, drugi czas wyszukiwania.
+- w src/main.cpp w kodzie można zmieniać wczytywany plik danych zawierający od 10 - 1M pozycji
+- nazwa programu: 'program'
