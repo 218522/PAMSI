@@ -12,3 +12,21 @@
 1459504300 /home/michal/Pulpit/PAMSI/3 ZAJECIA/LISTA/include/list_head.h
 	"element.h"
 
+1459977528 source:c:\users\michal\desktop\git\pamsi\3_program\przygotowanie\lista\main.cpp
+	<iostream>
+	"element.h"
+	"list_head.h"
+
+1459977528 c:\users\michal\desktop\git\pamsi\3_program\przygotowanie\lista\include\element.h
+
+1459977528 c:\users\michal\desktop\git\pamsi\3_program\przygotowanie\lista\include\list_head.h
+	"element.h"
+
+1459977528 source:c:\users\michal\desktop\git\pamsi\3_program\przygotowanie\lista\src\element.cpp
+	"element.h"
+
+1459977528 source:c:\users\michal\desktop\git\pamsi\3_program\przygotowanie\lista\src\list_head.cpp
+	"list_head.h"
+	"element.h"
+	<iostream>
+

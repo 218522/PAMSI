@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1460727087 source:/home/michal/PAMSI/5_program/tablica_asociacyjna/main.cpp
+	<iostream>
+	<string>
+	<key_uncd.h>
+
+1460727117 /home/michal/PAMSI/5_program/tablica_asociacyjna/include/key_uncd.h
+	<string>
+	<iostream>
+
+1461083631 source:c:\users\michal\desktop\git\pamsi\5_program\tablica_asociacyjna\main.cpp
+	<iostream>
+	<string>
+	<key_uncd.h>
+
+1461083631 c:\users\michal\desktop\git\pamsi\5_program\tablica_asociacyjna\include\key_uncd.h
+	<string>
+	<iostream>
+

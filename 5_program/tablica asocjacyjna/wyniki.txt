@@ -1,0 +1,12 @@
+Execution time: 40.997
+Execution time: 0
+Execution time: 40.887
+Execution time: 0.016
+Execution time: 40.887
+Execution time: 0
+Execution time: 48.129
+Execution time: 0.002
+Execution time: 69.676
+Execution time: 0.002
+Execution time: 64.813
+Execution time: 0.005
