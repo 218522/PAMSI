@@ -23,7 +23,7 @@ int main()
     timer time_counter;
     initiate_list(List,10);
     time_counter.start_clock();
-    List.find_in_list(5);
+    List.find_in_list(10);
     time_counter.stop_clock();
     time_counter.get_time();
     return 0;

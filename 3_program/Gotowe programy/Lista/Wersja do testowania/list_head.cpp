@@ -47,7 +47,7 @@ int list_head::add(int position){
     else if(list_size+1==position){
         element * whos_before = get(position-1);
         whos_before->next = n_element;
-        cout<<"*Added element at position: "<<position<<endl;
+	// cout<<"*Added element at position: "<<position<<endl;
     }
     // Add element at the beginning of the list
     else if(list_size == 1){
