@@ -55,7 +55,6 @@ int list_head::size(){
 //Adds element at 'position' at the list
 int list_head::add(int position, string name, int value){
 
-    int list_size = size();
     element * n_element = new element;
     n_element->value=value;
     n_element->name=name;
@@ -107,8 +106,10 @@ element* list_head::get(int position){
         }
     return pointer;
     }
-    else
+    else{
         cout<<"List is empty!"<<endl;
+	return 0;
+    }
 }
 // Removes element from the list
 void list_head::remove(int position){

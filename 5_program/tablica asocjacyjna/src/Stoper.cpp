@@ -1,5 +1,4 @@
 #include "Stoper.h"
-#include "file_service.h"
 #include <fstream>
 
 using namespace std;
@@ -17,7 +16,6 @@ void Stoper::Wylacz()
 void Stoper::Czas_trwania()
 {
     fstream plik_1;
-    file_service f_service;
     trwanie=(double)(stop-start)/CLOCKS_PER_SEC;
     plik_1.open("wyniki.txt", ios::out | ios::app);
             if(plik_1.good() == true)

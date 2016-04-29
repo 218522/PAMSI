@@ -1,11 +1,9 @@
-#include "AssocTab.h"
 #include <string>
 #include<iostream>
+#include "AssocTab.h"
+
 using namespace std;
 
-void AssocTab::set_table_size(int n){
-    this->table[n];
-}
 // Reads first letter from name and returns hash
 int AssocTab::uncode(string key){
     string alphabet = "abcdefghijklmnopqrstuvwxyz!";
@@ -46,6 +44,7 @@ int AssocTab::how_many_elements(){
         sum+=how_many_elements_in_bucket(i);
     }
     cout<<"Elements at all: "<<sum<<endl;
+    return sum;
 }
 
 void AssocTab::find_by_name(std::string name){
