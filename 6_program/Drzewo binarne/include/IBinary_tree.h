@@ -5,8 +5,9 @@
 class IBinary_tree
 {
     public:
-        virtual void add(Element* n_element)=0;
+        virtual void add(int value)=0;
         virtual void find(Element* target)=0;
+        virtual void moving_pre_order(Element* start_element)=0;
 };
 
 #endif // IBINARY_TREE_H

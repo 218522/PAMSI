@@ -1,25 +1,27 @@
 # depslib dependency file v1.0
-1461329594 source:c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\main.cpp
+1461698482 source:c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\main.cpp
 	<iostream>
-	<Element.h>
+	"Element.h"
+	"Binary_tree.h"
 
-1461330479 c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\include\element.h
+1461606882 c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\include\element.h
 
-1461329762 source:c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\src\element.cpp
+1461607239 source:c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\src\element.cpp
 	"Element.h"
 	<iostream>
 
 1461328886 c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\include\ielement.h
 
-1461330042 source:c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\src\binary_tree.cpp
+1461697682 source:c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\src\binary_tree.cpp
 	"Binary_tree.h"
 	<iostream>
 	"Element.h"
 
-1461330272 c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\include\binary_tree.h
+1461770988 c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\include\binary_tree.h
 	"IBinary_tree.h"
 	"Element.h"
+	<string>
 
-1461330226 c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\include\ibinary_tree.h
+1461608703 c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\include\ibinary_tree.h
 	"Element.h"
 

@@ -8,4 +8,7 @@ Element::Element()
     left=NULL;
     color = 'r';
 }
+void Element::set_value(int val){
+    value = val;
+}
 
