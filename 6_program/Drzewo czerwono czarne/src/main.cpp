@@ -24,7 +24,7 @@ int main()
   cout<<"- Looking for last added Node"<<endl;
 
   timer.start_clock();
-  Node* found_element = Tree_RB->search_for_value(generator.value_array[i-1]);
+  Tree_RB->search_for_value(generator.value_array[i-1]);
   timer.stop_clock();
 
   cout<<"- Finished in: "<<timer.get_time()<<" [ms]"<<endl;
