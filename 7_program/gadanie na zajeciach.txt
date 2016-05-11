@@ -1,0 +1,17 @@
+Grafy
++ notatka na papierze
+
+Interfejs grafu
+
+add_vertex(V)
+add_edge(x,y)
+get_neighbours (metoda do znajdywania s¹siadów danego wêz³a)
+is_connected(x,y) (metoda sprawdzaj¹ca czy dane wêz³y s¹ po³¹czone)
+
+ZADANIE
+Zaimplementowaæ graf.
+W sprawozdaniu uzasadniæ wybór metody okreœlania s¹siedztwa (lista/macierz)
+implementacja DFS, BFS
+sprawdziæ przeszukiwania grafu (diwema metodami) którego liczba wierzcho³ków 10 - 10^6
+
+text maker

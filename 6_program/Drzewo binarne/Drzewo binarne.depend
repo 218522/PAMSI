@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1461698482 source:c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\main.cpp
+1462479486 source:c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\main.cpp
 	<iostream>
 	"Element.h"
 	"Binary_tree.h"
@@ -12,12 +12,12 @@
 
 1461328886 c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\include\ielement.h
 
-1461697682 source:c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\src\binary_tree.cpp
+1462479809 source:c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\src\binary_tree.cpp
 	"Binary_tree.h"
 	<iostream>
 	"Element.h"
 
-1461770988 c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\include\binary_tree.h
+1462468420 c:\users\michal\desktop\git\pamsi\6_program\drzewo binarne\include\binary_tree.h
 	"IBinary_tree.h"
 	"Element.h"
 	<string>
