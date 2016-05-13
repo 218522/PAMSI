@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1463144082 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\main.cpp
+	<iostream>
+	"Graf.h"
+
+1463144589 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\graf.cpp
+	"Graf.h"
+
+1463144760 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\graf.h
+	"IGraf.h"
+	"list_table.h"
+
+1463143293 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\igraf.h
+
+1463144128 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\list_head.h
+	"element.h"
+
+1463144020 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\element.h
+
+1463144022 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\element.cpp
+	"element.h"
+	<iostream>
+
+1463143797 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\list_head.cpp
+	"element.h"
+	"list_head.h"
+	<iostream>
+
+1463145453 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\list_table.h
+	<list>
+
