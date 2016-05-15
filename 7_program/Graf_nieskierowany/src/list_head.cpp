@@ -10,6 +10,17 @@ list_head::list_head()
     cout<<"List created"<<endl;
 }
 
+int list_head::find_in_list(int value){
+    element* pointer = first;
+    while((pointer->next !=0)&&(pointer->value != value)){
+        pointer = pointer->next;
+    }
+    if(pointer == 0)
+        return (-1);
+    else
+        return (1);
+}
+
 //Zwraca i wypisuje rozmiar listy
 int list_head::size(){
     int list_size=0;
@@ -26,39 +37,22 @@ int list_head::size(){
 }
 
 //Adds element at 'position' at the list
-int list_head::add(int position){
-    int list_size = size();
+void list_head::add(int position, int vertex_number){
+    element * n_element = new element;
+    n_element->value=vertex_number;
     // If list is empty
     if(first==0){
-        element * n_element = new element;
         first = n_element;
         cout<<"*List empty"<<endl<<"*Added element at position: 1"<<endl;
     }
-    // Add element at the end of the list
-    else if(list_size+1==position){
-        element * n_element = new element;
-        element * whos_before = get(position-1);
-        whos_before->next = n_element;
-        cout<<"*Added element at position: "<<position<<endl;
-    }
     // Add element at the beginning of the list
-    else if(list_size == 1){
-        element * n_element = new element;
-        element* whos_after = get(position+1);
+    else if(position == 1){
+        element* pointer = first;
         first = n_element;
-        n_element->next=whos_after;
-        cout<<"*Added element at position: "<<position<<endl;
-    }
-    // Add element inside the list
-    else{
-        element * n_element = new element;
-        element* whos_before = get(position-1);
-        element* who_was_there = whos_before->next;
-        n_element->next = who_was_there;
-        whos_before->next=n_element;
-        cout<<"*Added element at position: "<<position<<endl;
+        n_element->next=pointer;
     }
 }
+
 // Returns pointer to element at 'position'
 element* list_head::get(int position){
     int current_position = 0;

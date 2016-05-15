@@ -3,29 +3,34 @@
 	<iostream>
 	"Graf.h"
 
-1463144589 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\graf.cpp
+1463347516 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\graf.cpp
 	"Graf.h"
+	<iostream>
 
-1463144760 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\graf.h
+1463348083 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\graf.h
 	"IGraf.h"
 	"list_table.h"
 
-1463143293 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\igraf.h
+1463347435 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\igraf.h
 
-1463144128 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\list_head.h
+1463347571 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\list_head.h
 	"element.h"
 
-1463144020 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\element.h
+1463347187 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\element.h
 
-1463144022 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\element.cpp
+1463344826 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\element.cpp
 	"element.h"
 	<iostream>
 
-1463143797 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\list_head.cpp
+1463347571 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\list_head.cpp
 	"element.h"
 	"list_head.h"
 	<iostream>
 
-1463145453 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\list_table.h
-	<list>
+1463345442 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\list_table.h
+	"list_head.h"
+
+1463345189 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\list_table.cpp
+	"list_table.h"
+	<iostream>
 
