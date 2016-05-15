@@ -17,7 +17,7 @@ class AssocTab
         void find_by_name(std::string name);
     private:
         // last array index created for unappropriate names
-        list_head table[13];
+        list_head table[26];
 };
 
 #endif // ASSOCTAB_H

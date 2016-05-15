@@ -9,22 +9,20 @@ using namespace std;
 int main()
 {
     element Name_Number;
-    Stoper stoper_1;
+    Stoper stoper,stoper2;
     AssocTab Associative_Array;
-    std::ifstream plik("dane10.txt");
-    stoper_1.przygotuj();
-    stoper_1.Wlacz();
+    std::ifstream plik("dane1m.txt");
+    stoper.start_clock();
     while(plik>>Name_Number.name){
         plik>>Name_Number.value;
         Associative_Array.add(Name_Number);
     }
-    stoper_1.Wylacz();
-    stoper_1.Czas_trwania();
-    Associative_Array.how_many_elements();
-    stoper_1.przygotuj();
-    stoper_1.Wlacz();
+    stoper.stop_clock();
+    cout<<"Czas dodawania: "<<stoper.get_time()<<endl;
+    //Associative_Array.how_many_elements();
+    stoper2.start_clock();
     Associative_Array.find_by_name("astra");
-    stoper_1.Wylacz();
-    stoper_1.Czas_trwania();
+    stoper2.stop_clock();
+    cout<<"Czas wyszukiwania: "<<stoper2.get_time()<<endl;
     return 0;
 }

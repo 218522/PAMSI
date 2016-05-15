@@ -1,32 +1,19 @@
 #ifndef STOPER_H
 #define STOPER_H
-
-#include <iostream>
+#include<iostream>
 #include <time.h>
-#include <fstream>
-
-using namespace std;
 
 class Stoper
 {
-private:
-    time_t start, stop;
-    double trwanie, suma;
-public:
+    clock_t start_time;
+    clock_t stop_time;
+    long time;
 
-    double get_trwanie()
-    {
-        return trwanie;
-    }
-    double get_suma()
-    {
-        return suma;
-    }
-    void Wlacz();
-    void Wylacz();
-    void Czas_trwania();
-    void Zliczaj_do_sumy();
-    void przygotuj();
+    public:
+        void start_clock(); //startuje Stoper
+        void stop_clock();  //stopuje Stoper
+        long get_time();    //oblicza i wypisuje zmierzony czas
 };
 
-#endif
+#endif // STOPER_H
+
