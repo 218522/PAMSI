@@ -7,18 +7,35 @@ using namespace std;
 list_head::list_head()
 {
     this->first=0;
-    cout<<"List created"<<endl;
+    //cout<<"List created"<<endl;
+}
+
+void list_head::show_list(){
+    element* pointer = first;
+    for(int i=0; i < size(); i++){
+        cout<<pointer->value<<endl;
+        pointer = pointer->next;
+    }
 }
 
 int list_head::find_in_list(int value){
     element* pointer = first;
-    while((pointer->next !=0)&&(pointer->value != value)){
-        pointer = pointer->next;
+    if(first != 0){
+        while(pointer->value != value){
+
+            if(pointer->next != 0){
+                pointer = pointer->next;
+            }
+            else
+                break;
+        }
+        if(pointer->value == value)
+            return (1);
+        else
+            return (-1);
     }
-    if(pointer == 0)
-        return (-1);
     else
-        return (1);
+        return (-1);
 }
 
 //Zwraca i wypisuje rozmiar listy
@@ -43,13 +60,20 @@ void list_head::add(int position, int vertex_number){
     // If list is empty
     if(first==0){
         first = n_element;
-        cout<<"*List empty"<<endl<<"*Added element at position: 1"<<endl;
+        //cout<<"*List empty"<<endl<<"*Added element at position: 1"<<endl;
     }
     // Add element at the beginning of the list
     else if(position == 1){
         element* pointer = first;
         first = n_element;
         n_element->next=pointer;
+    }
+    else if(position == 0){
+        element* pointer = first;
+        while(pointer->next != 0){
+            pointer = pointer->next;
+        }
+        pointer->next = n_element;
     }
 }
 
@@ -72,27 +96,16 @@ element* list_head::get(int position){
 void list_head::remove(int position){
     int list_size=size();
     int value;
-    // remove element from the end of the list
-    if(list_size==position){
-        element* whos_before = get(position-1);
-        value=whos_before->next->value;
-        delete whos_before->next;
-        whos_before->next=0;
+    // remove element from the end beginning
+    if(position==1){
+            if(list_size == 1){
+                delete first;
+                first = 0;
+            }
+            else{
+                element* pointer = first->next;
+                delete first;
+                first = pointer;
+            }
     }
-    // remove element at the beginning of the list
-    else if (position==1){
-        element* whos_after = get(position+1);
-        value=first->value;
-        delete first;
-        first = whos_after;
-    }
-    // remove element from list
-    else{
-        element* whos_before = get(position-1);
-        value=whos_before->next->value;
-        element* whos_after = whos_before->next->next;
-        delete whos_before->next;
-        whos_before->next=whos_after;
-    }
-    cout<<endl<<"*element:"<<endl<<"*position: "<<position<<endl<<"*value: "<<value<<endl<<"REMOVED!"<<endl<<endl;
 }

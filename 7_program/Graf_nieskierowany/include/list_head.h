@@ -13,6 +13,7 @@ class list_head
         int size();
         element* get(int position);
         void remove(int position);
+        void show_list();
     private:
         element * first;
 };

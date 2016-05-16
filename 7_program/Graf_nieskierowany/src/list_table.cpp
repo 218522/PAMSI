@@ -5,7 +5,8 @@ using namespace std;
 
 list_table::list_table(){
     cout<<"Define size of graph: ";
-    cin>>size;
+    //cin>>size;
+    size = 100000;
     table = new  list_head[size];
 }
 

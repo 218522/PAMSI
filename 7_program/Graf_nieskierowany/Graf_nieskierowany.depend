@@ -1,19 +1,22 @@
 # depslib dependency file v1.0
-1463144082 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\main.cpp
+1463426279 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\main.cpp
 	<iostream>
 	"Graf.h"
+	"Stoper.h"
+	<cstdlib>
 
-1463347516 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\graf.cpp
+1463418977 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\graf.cpp
 	"Graf.h"
 	<iostream>
 
-1463348083 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\graf.h
+1463416798 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\graf.h
 	"IGraf.h"
 	"list_table.h"
 
-1463347435 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\igraf.h
+1463389766 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\igraf.h
+	"list_head.h"
 
-1463347571 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\list_head.h
+1463400704 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\list_head.h
 	"element.h"
 
 1463347187 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\element.h
@@ -22,7 +25,7 @@
 	"element.h"
 	<iostream>
 
-1463347571 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\list_head.cpp
+1463410005 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\list_head.cpp
 	"element.h"
 	"list_head.h"
 	<iostream>
@@ -30,7 +33,16 @@
 1463345442 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\list_table.h
 	"list_head.h"
 
-1463345189 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\list_table.cpp
+1463426279 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\list_table.cpp
 	"list_table.h"
 	<iostream>
+
+1463410053 source:c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\src\stoper.cpp
+	"Stoper.h"
+	<iostream>
+	<time.h>
+
+1463410040 c:\users\michal\desktop\git\pamsi\7_program\graf_nieskierowany\include\stoper.h
+	<iostream>
+	<time.h>
 

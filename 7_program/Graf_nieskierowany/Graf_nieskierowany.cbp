@@ -36,11 +36,13 @@
 		</Compiler>
 		<Unit filename="include/Graf.h" />
 		<Unit filename="include/IGraf.h" />
+		<Unit filename="include/Stoper.h" />
 		<Unit filename="include/element.h" />
 		<Unit filename="include/list_head.h" />
 		<Unit filename="include/list_table.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Graf.cpp" />
+		<Unit filename="src/Stoper.cpp" />
 		<Unit filename="src/element.cpp" />
 		<Unit filename="src/list_head.cpp" />
 		<Unit filename="src/list_table.cpp" />
