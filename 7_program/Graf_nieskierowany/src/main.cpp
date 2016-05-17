@@ -9,9 +9,6 @@ int main()
 {
     Graf Grafes;
     Stoper Timer_1;
-    Stoper Timer_2;
-
-    int g_size = Grafes.graph_size();
 
     // Inicjowanie krawedzi grafu
     for(int i=0; i<(Grafes.graph_size()-1); i++){
@@ -20,6 +17,7 @@ int main()
     Grafes.add_Edge(Grafes.graph_size()-1, 0);
     Grafes.add_Edge(Grafes.graph_size()-1, Grafes.graph_size()/2);
 /*
+    int g_size = Grafes.graph_size();
     for(int i=0;i<g_size-1;i++)
         Grafes.add_Edge(i,i+1);
     Grafes.add_Edge(0,g_size-1);
@@ -33,10 +31,10 @@ int main()
     cout<<" BFS time: "<<Timer_1.get_time()<<"[ms]"<<endl;
 
     /*Grafes.clear();
-    Timer_2.start_clock();
+    Timer_1.start_clock();
     Grafes.DFS(1);
-    Timer_2.stop_clock();
-    cout<<" DFS time: "<<Timer_2.get_time()<<"[ms]"<<endl;
+    Timer_1.stop_clock();
+    cout<<" DFS time: "<<Timer_1.get_time()<<"[ms]"<<endl;
 */
     return 0;
 }

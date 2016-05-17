@@ -89,13 +89,13 @@ element* list_head::get(int position){
         }
     return pointer;
     }
-    else
+    else{
         cout<<"List is empty!"<<endl;
+	return 0;}
 }
 // Removes element from the list
 void list_head::remove(int position){
     int list_size=size();
-    int value;
     // remove element from the end beginning
     if(position==1){
             if(list_size == 1){
