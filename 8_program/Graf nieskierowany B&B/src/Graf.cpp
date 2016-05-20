@@ -4,7 +4,9 @@
 using namespace std;
 
 Graf::Graf(){
-    for(int i=0; i<graph_size(); i++){
+    int size = graph_size();
+    visited_table = new int[size];
+    for(int i=0; i<size; i++){
         visited_table[i]=-1;
     }
 }
@@ -122,12 +124,13 @@ int Graf::check_if_Visited(int vertex_number){
 void Graf::Branch_and_Bound(int start, int stop){
     list_head queue;
     element* pointer;
-    int final_cost [graph_size()];      //table including final costs of getting from start to point i
-    int predecessor [graph_size()];     //table including predecessors with the "shortest" way to i
-    //Initializing tables 2147483647 <- max int size, -1 <- no predecessor found
+    int static grph_size = graph_size();
+    int* final_cost = new int[grph_size];      //table including final costs of getting from start to point i
+    int* predecessor = new int[grph_size];     //table including predecessors with the "shortest" way to i
+    
     for(int i=0; i<graph_size(); i++){
-        final_cost[i] = 2147483647;     //
-        predecessor[i] = -1;
+        final_cost[i] = 2147483647;     //Initializing tables 27483647 <- max int size
+        predecessor[i] = -1;		//-1 <- no predecessor found
     }
 
     int a,b;

@@ -21,7 +21,7 @@ class Graf
         void clear();
     private:
         list_table connection_list;
-        int* visited_table = new int[graph_size()]; //table of visited elements. -1 = not visited, 1 = visited
+        int* visited_table;// = new int[graph_size()]; //table of visited elements. -1 = not visited, 1 = visited
 };
 
 #endif // GRAF_H

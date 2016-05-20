@@ -24,25 +24,4 @@ int main()
     cout<<endl<<" B&B time: "<<Timer_1.get_time()<<"[ms]"<<endl;
     return 0;
 }
-/*
-    // Inicjowanie krawedzi grafu
-    for(int i=0; i<(Grafes.graph_size()-1); i++){
-        Grafes.add_Edge(i, i+1);
-    }
-    Grafes.add_Edge(Grafes.graph_size()-1, 0);
-    Grafes.add_Edge(Grafes.graph_size()-1, Grafes.graph_size()/2);
 
-
-
-    // Pomiary
-    Timer_1.start_clock();
-    Grafes.BFS(1);
-    Timer_1.stop_clock();
-    cout<<" BFS time: "<<Timer_1.get_time()<<"[ms]"<<endl;
-
-    /*Grafes.clear();
-    Timer_1.start_clock();
-    Grafes.DFS(1);
-    Timer_1.stop_clock();
-    cout<<" DFS time: "<<Timer_1.get_time()<<"[ms]"<<endl;
-*/
