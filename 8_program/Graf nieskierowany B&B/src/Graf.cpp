@@ -21,47 +21,6 @@ void Graf::clear(){
     }
 }
 
-/*void Graf::BFS(int vertex_number){
-    Visit(vertex_number);
-    queue.add(0,vertex_number, -1);
-
-
-        while(queue.size()!=0)
-        {
-            vertex_number = queue.first->connected_vertex;
-            queue.remove(1);
-            element* pointer = get_Neighbours(vertex_number).first;
-
-                while(1){
-                    if(check_if_Visited(pointer->connected_vertex)==-1){
-                        Visit(pointer->connected_vertex);
-                        cout<<"->"<<pointer->connected_vertex;
-                        queue.add(0,pointer->connected_vertex, -1);
-                    }
-                    if(pointer->next != 0){
-                    pointer = pointer->next;
-                    }
-                    else
-                        break;
-                }
-        }
-}
-*/
-/*
-void Graf::DFS(int vertex_number){
-    Visit(vertex_number);
-
-    element* pointer = connection_list.table[vertex_number].first;
-    for(pointer = connection_list.table[vertex_number].first; pointer!=0; pointer=pointer->next){
-            vertex_number = pointer->connected_vertex;
-        if(check_if_Visited(vertex_number) == -1){
-            //cout<<pointer->value<<endl;
-            DFS(vertex_number);
-        }
-    }
-}
-*/
-
 void Graf::Visit(int vertex_number){
     visited_table[vertex_number]=1;
 }
@@ -121,13 +80,13 @@ int Graf::check_if_Visited(int vertex_number){
         return (-1);
 }
 
-void Graf::Branch_and_Bound(int start, int stop){
+void Graf::Branch_and_Bound_extended_list(int start, int stop){
     list_head queue;
     element* pointer;
     int static grph_size = graph_size();
     int* final_cost = new int[grph_size];      //table including final costs of getting from start to point i
     int* predecessor = new int[grph_size];     //table including predecessors with the "shortest" way to i
-    
+
     for(int i=0; i<graph_size(); i++){
         final_cost[i] = 2147483647;     //Initializing tables 27483647 <- max int size
         predecessor[i] = -1;		//-1 <- no predecessor found
@@ -160,6 +119,95 @@ void Graf::Branch_and_Bound(int start, int stop){
         }
     }
     //find path and lowest costs to get there from 'start' to 'stop'
+    int u = stop;
+    queue.add(1,stop,0);
+    while(1){
+        if(predecessor[u]!=start){
+            queue.add(1,predecessor[u],0);
+            u=predecessor[u];
+        }
+        else
+            break;
+    }
+    //print path and total cost
+    queue.add(1,start,0);
+    pointer = queue.first;
+    while(1){
+        cout<<"->"<<pointer->connected_vertex;
+        if(pointer->next!=0){
+            pointer = pointer->next;
+        }
+        else
+            break;
+    }
+    cout<<endl<<"Total cost: "<<final_cost[stop]<<endl;
+}
+
+void Graf::Branch_and_Bound(int start, int stop){
+    int final_cost [graph_size()];      //table including final costs of getting from start to point i
+    int predecessor [graph_size()];     //table including predecessors with the "shortest" way to i
+    for(int i=0; i<graph_size(); i++){
+        final_cost[i]=20000000;
+        predecessor[i]=-1;
+    }
+    final_cost[0]=0;
+    char found = 'n';   //stop element found ? n = no, y = yes
+    int vertex;
+    element* pointer;
+    list_head queue;
+
+    queue.add(1,start,-1);
+    //Search for stop vertex and save paths in predecessor, save costs of getting to path in final_costs
+    while(1){
+        if(found == 'n'){
+            vertex = queue.first->connected_vertex;
+            if(vertex!=stop){
+                pointer = get_Neighbours(vertex).first;
+                while(1){
+                    if(final_cost[pointer->connected_vertex] > final_cost[vertex] + pointer->edge_value){
+                        predecessor[pointer->connected_vertex] = vertex;
+                        final_cost[pointer->connected_vertex] = final_cost[vertex] + pointer->edge_value;
+                        queue.add(0,pointer->connected_vertex,-1);
+                    }
+                    if(pointer->next != 0){
+                        pointer = pointer->next;
+                    }
+                    else
+                        break;
+                }
+            }
+            else
+                found = 'y';
+            queue.remove(1);
+
+
+        }
+        else
+            break;
+    }
+    queue.add(0,vertex,-1);
+    //If stop vertex found, search for other possibilities. Check if there is shorter path. Search until queue != empty, and shortest path in queue < actual path to stop vertex
+    while(queue.size()!=0){
+        vertex = queue.first->connected_vertex;
+        pointer = get_Neighbours(vertex).first;
+        if(final_cost[vertex]<final_cost[stop]){
+            while(1){
+            if(final_cost[pointer->connected_vertex] > final_cost[vertex] + pointer->edge_value){
+                predecessor[pointer->connected_vertex] = vertex;
+                final_cost[pointer->connected_vertex] = final_cost[vertex] + pointer->edge_value;
+                queue.add(0,pointer->connected_vertex,-1);
+            }
+            if(pointer->next != 0){
+                pointer = pointer->next;
+            }
+            else
+                break;
+            }
+        }
+        queue.remove(1);
+    }
+
+    //Find path
     int u = stop;
     queue.add(1,stop,0);
     while(1){

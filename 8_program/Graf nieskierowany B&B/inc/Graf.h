@@ -8,9 +8,8 @@ class Graf
 {
     public:
         Graf();
+        void Branch_and_Bound_extended_list(int start, int stop);
         void Branch_and_Bound(int start, int stop);
-        //void BFS(int vertex_number);
-        //void DFS(int vertex_number);
         void add_Edge(int vertex_number_1, int vertex_number_2, int edge_value);
         void add_Vertex(int vertex_number_1);
         list_head get_Neighbours(int vertex_number);                //return list of neighbours
