@@ -88,7 +88,7 @@ void Graf::Branch_and_Bound_extended_list(int start, int stop){
     int* predecessor = new int[grph_size];     //table including predecessors with the "shortest" way to i
 
     for(int i=0; i<graph_size(); i++){
-        final_cost[i] = 2147483647;     //Initializing tables 27483647 <- max int size
+        final_cost[i] = 27483647;     //Initializing tables 27483647 <- max int size
         predecessor[i] = -1;		//-1 <- no predecessor found
     }
 
@@ -133,7 +133,7 @@ void Graf::Branch_and_Bound_extended_list(int start, int stop){
     queue.add(1,start,0);
     pointer = queue.first;
     while(1){
-        cout<<"->"<<pointer->connected_vertex;
+        //cout<<"->"<<pointer->connected_vertex;
         if(pointer->next!=0){
             pointer = pointer->next;
         }
@@ -144,10 +144,10 @@ void Graf::Branch_and_Bound_extended_list(int start, int stop){
 }
 
 void Graf::Branch_and_Bound(int start, int stop){
-    int final_cost [graph_size()];      //table including final costs of getting from start to point i
-    int predecessor [graph_size()];     //table including predecessors with the "shortest" way to i
+    int* final_cost = new int[graph_size()];      //table including final costs of getting from start to point i
+    int* predecessor = new int[graph_size()];     //table including predecessors with the "shortest" way to i
     for(int i=0; i<graph_size(); i++){
-        final_cost[i]=20000000;
+        final_cost[i]=27483647;
         predecessor[i]=-1;
     }
     final_cost[0]=0;
@@ -222,7 +222,7 @@ void Graf::Branch_and_Bound(int start, int stop){
     queue.add(1,start,0);
     pointer = queue.first;
     while(1){
-        cout<<"->"<<pointer->connected_vertex;
+        //cout<<"->"<<pointer->connected_vertex;
         if(pointer->next!=0){
             pointer = pointer->next;
         }
