@@ -123,30 +123,7 @@ void Graf::Branch_and_Bound_extended_list(int start, int stop){
         else
             break;
     }
-    queue.add(0,vertex,-1);
-    //If stop vertex found, search for other possibilities. Check if there is shorter path. Search until queue != empty, and shortest path in queue < actual path to stop vertex
-    while(queue.size()!=0){
-        vertex = queue.first->connected_vertex;
-        pointer = get_Neighbours(vertex).first;
-        if(final_cost[vertex]<final_cost[stop]){
-            while(1){
-            if(check_if_Visited(pointer->connected_vertex)==-1){
-                if(final_cost[pointer->connected_vertex] > final_cost[vertex] + pointer->edge_value){
-                    predecessor[pointer->connected_vertex] = vertex;
-                    final_cost[pointer->connected_vertex] = final_cost[vertex] + pointer->edge_value;
-                    queue.add(0,pointer->connected_vertex,-1);
-                }
-            }
-            if(pointer->next != 0){
-                pointer = pointer->next;
-            }
-            else
-                break;
-            }
-        }
-        queue.remove(1);
-    }
-
+/*
     //Find path
     int u = stop;
     queue.add(1,stop,0);
@@ -168,7 +145,7 @@ void Graf::Branch_and_Bound_extended_list(int start, int stop){
         }
         else
             break;
-    }
+    }*/
     cout<<endl<<"Total cost: "<<final_cost[stop]<<endl;
 }
 
@@ -236,7 +213,7 @@ void Graf::Branch_and_Bound(int start, int stop){
         }
         queue.remove(1);
     }
-
+/*
     //Find path
     int u = stop;
     queue.add(1,stop,0);
@@ -258,6 +235,6 @@ void Graf::Branch_and_Bound(int start, int stop){
         }
         else
             break;
-    }
+    }*/
     cout<<endl<<"Total cost: "<<final_cost[stop]<<endl;
 }
