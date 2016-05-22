@@ -188,6 +188,7 @@ void Lista::Quicksort(int left_counter, int right_counter){
   Element* pivot;
   int pivot_value;
   int list_size = left_counter+right_counter-1;
+
   //Pivot to srodkowy element listy
   if(list_size%2==0){
     pivot = get_address(list_size/2);
@@ -196,31 +197,7 @@ void Lista::Quicksort(int left_counter, int right_counter){
     pivot = get_address((list_size+1)/2);
   }
   pivot_value=pivot->dana;
-  // koniec wybierania pivota
-  //Pivot = zaokraglona wartosc srednia
-  /*
-  float average=0;
-  Element *tmp=get_address(left_counter);
-  while(how_far(tmp)<=right_counter)
-    {
-      average+=tmp->dana;
-      tmp=tmp->nastepny;
-    }
-    average = average/list_size;
-    average=round(average);
-    while(1){
-      tmp=get_address(left_counter);
-      while((tmp->dana!=average)&&(how_far(tmp)<=right_counter)){
-	tmp=tmp->nastepny;
-	}
-	if(tmp->dana!=average){
-	average--;
-	}
-	else{break;}
-    }
-    pivot_value = average;
-    cout<<"Pivot: "<<average<<endl;
-  */
+  
 
   Element* left = get_address(left_counter);
   Element* right = get_address(right_counter);
@@ -251,5 +228,43 @@ void Lista::Quicksort(int left_counter, int right_counter){
     Quicksort(how_far(left), right_counter);
   }
 }
+
+// Mergesort
+void Lista::Merge(int left, int new_line, int right, int* help)
+{
+	int i,j,q;
+	// Copy from list to help array
+	for (i=left; i <= right; i++){
+		help[i] = get_address(i)->dana;  
+	}
+	// Set pointers
+	i = left;
+	j = new_line + 1;
+	q = left;
+	// Sort elements and move from help array to list
+	while (i <= new_line && j <= right) {
+		if (help[i] < help[j]){
+			get_address(q++)->dana = help[i++];
+		}
+		else
+			get_address(q++)->dana = help[j++];
+	}
+	while (i <= new_line){
+		get_address(q++)->dana = help[i++];
+	}
+
+}
+
+void Lista::Mergesort(int left, int right, int* help)
+{
+	int new_line;
+	if (left < right) {
+		new_line = (left + right)/2;
+		Mergesort(left, new_line, help);
+		Mergesort(new_line + 1, right, help);
+		Merge(left, new_line, right, help);     // Merge left part, right part
+	}
+}
+
 //********************modifications bottom***************
 

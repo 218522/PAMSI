@@ -15,15 +15,30 @@ using namespace std;
 
 int main()
 {
-  stoper stoper;
-  Test_lista Test;
-  Test.przygotuj(20000);
-  //Test.show_list();
-  stoper.Wlacz();
-  Test.Quicksort(1,20000);
-  stoper.Wylacz();
-  stoper.Czas_trwania();
-  //Test.show_list();
-  cout<<"Done"<<endl;
+  int size;
+  cout<<"Size: ";
+  cin>>size;
+  int* help = new int[size];
+
+  stoper stoper_1;
+  stoper stoper_2;
+
+  Test_lista Test_1;
+  Test_lista Test_2;
+
+  Test_1.przygotuj(size);
+  stoper_1.Wlacz();
+  cout<<"	Mergesort"<<endl;
+  Test_1.Mergesort(1,size,help);
+  stoper_1.Wylacz();
+  stoper_1.Czas_trwania();
+
+  Test_2.przygotuj(size);
+  stoper_2.Wlacz();
+  cout<<"	Quicksort"<<endl;
+  Test_2.Quicksort(1,size);
+  stoper_2.Wylacz();
+  stoper_2.Czas_trwania();
+
     return 0;
 }

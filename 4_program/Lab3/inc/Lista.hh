@@ -18,6 +18,8 @@ public:
     virtual int how_far(Element* pointer);
     virtual void show_list();
     virtual void Quicksort(int left_counter, int right_counter);
+    void Mergesort(int left, int right, int* help);
+    void Merge(int left, int new_line, int right, int* help);
     virtual void dodaj(int x,int nr);
     virtual void usun(int pozycja);
     virtual int get(int nr);
