@@ -45,4 +45,29 @@ z nimi program, lecz jest to mało prawdopodobne.
 
 To nie jest wystarczające uzasadnienie.
 
-**Ocena: 3,0**
+Zadanie poprawione, bez zastrzeżeń.
+
+**Ocena: 4,5**
+
+
+# Lab7 - drzewa
+
+Niestety z wykresów trudno jest odczytać, że złożoność odczytu faktycznie jest bliska O(logn).
+Byłoby to możliwe, gdyby były na nich umieszczone wykresy wzorcowe. Poza tym OK.
++ za plik "gadanie na zajeciach".
+
+Ocena: 5
+
+# Lab8 - grafy (dfs,bfs)
+
+Teoretyczna złożoność to O(|V| + |E|) czyli O(n). Otrzymane wykresy nie są jednoznaczne z O(n).
+Brak omówienia tego faktu.
+
+Ocena:4,5
+
+
+# Lab9 - grafy (b&b)
+
+brak zadana
+
+Ocena: 2
